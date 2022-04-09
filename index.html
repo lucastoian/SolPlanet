@@ -1,30 +1,75 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<style>
-    body {
-        background-image: ;
-    }
-</style>
-<body>
-    <div class="container p-0 m-0" style="min-width: 100%;">
-        <div class="" style="align-items: flex-end; display: flex; background-image: url(images/sf1.png); height: 80vh; background-size:cover; background-repeat: no-repeat; background-position: center center; background-size: 100%;  ">
-            <img src="images/csf1.png" class="img-fluid" alt="Responsive image" style="min-height: 40%; max-height: 80%; min-width: 100%;">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/css/uikit.min.css" />
 
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.13.7/dist/js/uikit-icons.min.js"></script>
+    </head>
+    <style>
+        html, body, #body2
+{
+    height: 100%;
+    min-height: 100%;
+}
+
+    </style>
+    <body>
+
+        <div class="uk-child-width-1-1 uk-text-center uk-grid-match" uk-grid>
+            <!-- griglia externa-->
+            <div >
+                <div class="uk-card uk-card-default uk-card-body uk-background-cover uk-padding-remove " style="background-image: url(images/sf1.png);">
+                    <h1 class="uk-card-title">Default</h1>
+                    <canvas width="800" height="400"></canvas>
+                    <div class="uk-card-media-bottom">
+                        <img id="cover" src="images/csf1.png" width="100%" height="40%" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">Item</div>
+            </div>
+            <div>
+                <div class="uk-child-width-1-1 uk-text-center" uk-grid>
+                    <!-- griglia interna-->
+                    <div>
+                        <div class="uk-card uk-card-primary uk-card-body">Item</div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-primary uk-card-body">Item</div>
+                    </div>
+                </div>
+            </div>
         </div>
-     
-    </div>
 
+    <script type="text/javascript">
+        div=document.getElementById("cover");
+        console.log("immagine= " +div);
+        var offset = [0,0];
+        div.style.position = "relative";
+
+        document.addEventListener('mousemove', function(event) {
+   // event.preventDefault();
+
+        mousePosition = {
+
+            x : event.clientX,
+            y : event.clientY
+
+        };
+      //  div.style.left = (mousePosition.x + offset[0]) + 'px';
+        console.log( "left= " + div.style.left);
+        //div.style.top  = (mousePosition.y + offset[1]) + 'px';
     
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-</body>
+}, true);
+    </script>
+    </body>
 </html>

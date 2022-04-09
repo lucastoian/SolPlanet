@@ -28,9 +28,9 @@
                 <div class="uk-card uk-card-default uk-card-body uk-background-cover uk-padding-remove uk-animation-toggle" tabindex="0" style="background-image: url(images/sf1.png);">
                     <h1 class="uk-card-title">Default</h1>
                     <canvas width="800" height="400"></canvas>
-                    <div class="uk-card-media-bottom uk-animation-reverse">
+                    <div class="uk-card-media-bottom uk-animation-reverse uk-overflow-hidden">
                         
-                        <img id="cover" class="uk-animation-kenburns uk-transform-origin-bottom-left" src="images/csf1.png" width="100%" height="40%" alt="">
+                        <img id="cover" class="uk-animation-kenburns uk-transform-origin-top-bottom uk-animation-reverse" src="images/csf1.png" width="100%" height="40%" alt="">
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
         div=document.getElementById("cover");
         console.log("immagine= " +div);
         var offset = [0,0];
-        div.style.position = "relative";
+       // div.style.position = "relative";
 
         document.addEventListener('mousemove', function(event) {
    // event.preventDefault();
